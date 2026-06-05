@@ -16,13 +16,15 @@
         "id": "tenun",
         "aliases": ["Tenun", "tenun"],
         "extensions": [".tenun"],
-        "configuration": "./language-configuration.json"
+        "configuration": "./language-configuration.json",
+        "icon": { "light": "./icons/tenun.png", "dark": "./icons/tenun.png" }
       },
       {
         "id": "batik",
         "aliases": ["Batik", "batik"],
         "extensions": [".batik"],
-        "configuration": "./language-configuration.json"
+        "configuration": "./language-configuration.json",
+        "icon": { "light": "./icons/tenun.png", "dark": "./icons/tenun.png" }
       }
     ],
     "grammars": [
