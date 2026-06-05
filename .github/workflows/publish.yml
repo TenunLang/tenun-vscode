@@ -1,0 +1,30 @@
+name: Publish Extension
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install -g @vscode/vsce ovsx
+
+      # VS Code Marketplace (butuh secret VSCE_PAT)
+      - name: Publish ke VS Code Marketplace
+        if: ${{ env.VSCE_PAT != '' }}
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}
+        run: vsce publish -p "$VSCE_PAT"
+
+      # Open VSX untuk VSCodium/Cursor (opsional, butuh secret OVSX_PAT)
+      - name: Publish ke Open VSX
+        if: ${{ env.OVSX_PAT != '' }}
+        env:
+          OVSX_PAT: ${{ secrets.OVSX_PAT }}
+        run: ovsx publish -p "$OVSX_PAT"
