@@ -1,3 +1,6 @@
 .gitignore
-contoh.tenun
 .vscodeignore
+contoh.tenun
+PUBLISH.md
+.github/**
+*.vsix

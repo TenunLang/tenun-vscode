@@ -3,7 +3,7 @@
   "displayName": "Tenun",
   "description": "Syntax highlighting untuk bahasa pemrograman Tenun (.tenun) + template Batik (.batik).",
   "version": "0.1.0",
-  "publisher": "TenunLang",
+  "publisher": "fdciabdul",
   "license": "MIT",
   "icon": "logo.png",
   "engines": { "vscode": "^1.60.0" },
