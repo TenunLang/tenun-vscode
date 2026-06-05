@@ -1,0 +1,26 @@
+// Contoh untuk menguji pewarnaan sintaks.
+impor "web";
+
+tetap pi: desimal = 3.14;
+
+fungsi luas(r: desimal): desimal {
+    kembali pi * r * r;
+}
+
+fungsi sapa(nama: teks): teks {
+    kalau panjangTeks(nama) == 0 {
+        kembali "Halo, anonim";
+    }
+    kembali "Halo, " + nama + "!";
+}
+
+biar data: peta = peta{ "nama": "Tenun", "versi": "0.0.23" };
+biar fungsi_fungsi: []fungsi = [luas];
+
+untuk i dari 0 sampai 3 {
+    cetak(sapa(data["nama"]));
+    cetak(keTeks(bulatkan(luas(2.0))));
+}
+
+biar aktif: bool = benar && salah;
+cetak(aktif);

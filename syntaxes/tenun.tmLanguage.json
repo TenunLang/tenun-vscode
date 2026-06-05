@@ -1,0 +1,66 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Tenun",
+  "scopeName": "source.tenun",
+  "patterns": [
+    { "include": "#komentar" },
+    { "include": "#string" },
+    { "include": "#angka" },
+    { "include": "#deklarasi-fungsi" },
+    { "include": "#keyword" },
+    { "include": "#konstanta" },
+    { "include": "#tipe" },
+    { "include": "#builtin" },
+    { "include": "#panggilan" },
+    { "include": "#operator" }
+  ],
+  "repository": {
+    "komentar": {
+      "match": "//.*$",
+      "name": "comment.line.double-slash.tenun"
+    },
+    "string": {
+      "name": "string.quoted.double.tenun",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        { "match": "\\\\([ntr0\"\\\\])", "name": "constant.character.escape.tenun" }
+      ]
+    },
+    "angka": {
+      "match": "\\b[0-9]+(\\.[0-9]+)?\\b",
+      "name": "constant.numeric.tenun"
+    },
+    "deklarasi-fungsi": {
+      "match": "\\b(fungsi)\\s+([a-zA-Z_][a-zA-Z0-9_]*)",
+      "captures": {
+        "1": { "name": "keyword.declaration.function.tenun" },
+        "2": { "name": "entity.name.function.tenun" }
+      }
+    },
+    "keyword": {
+      "match": "\\b(biar|tetap|fungsi|kembali|kalau|lain|selama|untuk|dari|sampai|impor)\\b",
+      "name": "keyword.control.tenun"
+    },
+    "konstanta": {
+      "match": "\\b(benar|salah|kosong)\\b",
+      "name": "constant.language.tenun"
+    },
+    "tipe": {
+      "match": "\\b(bulat|desimal|teks|bool|peta|fungsi|dinamis)\\b",
+      "name": "storage.type.tenun"
+    },
+    "builtin": {
+      "match": "\\b(cetak|panjang|ambil|akar|pangkat|mutlak|bulatkan|panjangTeks|potong|bacaFile|tulisFile|layani|layaniSoket|statusKan|headerKan|cari|ganti|pisah|gabung|mulaiDengan|akhiriDengan|tipeKonten|jsonTeks|jsonAngka|jsonBool|adaFile|kueri|form|headerMasuk|cookie|simpan|muat|hapus|sambung|kirim|terima|terimaPasti|tutup|sha256|sha1|md5|hmacSha256|sha256Raw|hmacSha256Raw|sha1Raw|pbkdf2|base64|dariBase64|acak|xor|keByte|bacaInt|bacaFloat|keBulat|keTeks|dorong|petaPunya|petaKunci|petaHapus|httpKirim|sambungAman|kirimAman|terimaAman|tutupAman|siarkan)\\b",
+      "name": "support.function.builtin.tenun"
+    },
+    "panggilan": {
+      "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\s*(?=\\()",
+      "name": "entity.name.function.call.tenun"
+    },
+    "operator": {
+      "match": "(\\+|\\-|\\*|/|%|==|!=|<=|>=|<|>|&&|\\|\\||!|=)",
+      "name": "keyword.operator.tenun"
+    }
+  }
+}

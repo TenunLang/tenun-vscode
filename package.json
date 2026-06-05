@@ -1,0 +1,41 @@
+{
+  "name": "tenun",
+  "displayName": "Tenun",
+  "description": "Syntax highlighting untuk bahasa pemrograman Tenun (.tenun) + template Batik (.batik).",
+  "version": "0.1.0",
+  "publisher": "TenunLang",
+  "license": "MIT",
+  "icon": "logo.png",
+  "engines": { "vscode": "^1.60.0" },
+  "categories": ["Programming Languages"],
+  "keywords": ["tenun", "batik", "indonesia"],
+  "repository": { "type": "git", "url": "https://github.com/TenunLang/tenun-vscode" },
+  "contributes": {
+    "languages": [
+      {
+        "id": "tenun",
+        "aliases": ["Tenun", "tenun"],
+        "extensions": [".tenun"],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "batik",
+        "aliases": ["Batik", "batik"],
+        "extensions": [".batik"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "tenun",
+        "scopeName": "source.tenun",
+        "path": "./syntaxes/tenun.tmLanguage.json"
+      },
+      {
+        "language": "batik",
+        "scopeName": "text.batik",
+        "path": "./syntaxes/batik.tmLanguage.json"
+      }
+    ]
+  }
+}
