@@ -39,7 +39,7 @@
       }
     },
     "keyword": {
-      "match": "\\b(biar|tetap|fungsi|kembali|kalau|lain|selama|untuk|dari|sampai|impor)\\b",
+      "match": "\\b(biar|tetap|fungsi|kembali|kalau|lain|selama|untuk|dari|sampai|impor|henti|lanjut|coba|tangkap|cocok)\\b",
       "name": "keyword.control.tenun"
     },
     "konstanta": {
@@ -51,7 +51,7 @@
       "name": "storage.type.tenun"
     },
     "builtin": {
-      "match": "\\b(cetak|panjang|ambil|akar|pangkat|mutlak|bulatkan|panjangTeks|potong|bacaFile|tulisFile|layani|layaniSoket|statusKan|headerKan|cari|ganti|pisah|gabung|mulaiDengan|akhiriDengan|tipeKonten|jsonTeks|jsonAngka|jsonBool|adaFile|kueri|form|headerMasuk|cookie|simpan|muat|hapus|sambung|kirim|terima|terimaPasti|tutup|sha256|sha1|md5|hmacSha256|sha256Raw|hmacSha256Raw|sha1Raw|pbkdf2|base64|dariBase64|acak|xor|keByte|bacaInt|bacaFloat|keBulat|keTeks|dorong|petaPunya|petaKunci|petaHapus|httpKirim|sambungAman|kirimAman|terimaAman|tutupAman|siarkan)\\b",
+      "match": "\\b(cetak|panjang|ambil|akar|pangkat|mutlak|bulatkan|panjangTeks|potong|bacaFile|tulisFile|layani|layaniSoket|statusKan|headerKan|cari|ganti|pisah|gabung|mulaiDengan|akhiriDengan|tipeKonten|jsonTeks|jsonAngka|jsonBool|adaFile|kueri|form|headerMasuk|cookie|simpan|muat|hapus|sambung|kirim|terimaPasti|terima|tutup|sha256Raw|sha256|sha1Raw|sha1|md5|hmacSha256Raw|hmacSha256|pbkdf2|base64|dariBase64|acakAngka|acakDesimal|acak|xor|keByte|bacaInt|bacaFloat|keBulat|keDesimal|keTeks|dorong|petaPunya|petaKunci|petaHapus|httpKirim|sambungAman|kirimAman|terimaAman|tutupAman|siarkan|argumen|waktuMili|waktu|pangkas|keBesar|keKecil|tanggal|infoOS|lingkungan|jalankan|daftarBerkas|buatDir|hapusBerkas|hapusDir|ukuranBerkas|apakahDir|eksp|ln|log|sin|cos|tanh|tan|lantai|langit|desimalDari|bulatDari|teksDari|bacaGambar|tegasSamaBulat|tegasSama|tegas)\\b",
       "name": "support.function.builtin.tenun"
     },
     "panggilan": {
